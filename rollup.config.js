@@ -4,7 +4,7 @@ import { babel } from '@rollup/plugin-babel';
 const packageJson = require("./package.json");
 
 export default {
-    external: ["@pixelbin/core", "async-retry", "axios", "react"],
+    external: ["@pixelbin/core", "async-retry", "axios", "react", "pixelbin-core-ag"],
     input: "src",
     output: [{
         file: packageJson.main,

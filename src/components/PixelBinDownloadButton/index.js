@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import retry from "async-retry";
-import PixelBin from "@pixelbin/core"
+import PixelBin from "pixelbin-core-ag"
 
 import { PDKIllegalArgumentError } from "../../errors/PixelBinErrors.js";
 
