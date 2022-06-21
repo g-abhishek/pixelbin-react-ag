@@ -7,11 +7,12 @@ export default {
     external: ["@pixelbin/core", "async-retry", "axios", "react", "pixelbin-core-ag"],
     input: "src",
     output: [{
-        // file: packageJson.main,
-        file: "dist/cjs/bundle.js",
+        file: packageJson.main,
+        // file: "dist/cjs/bundle.js",
         format: "cjs",
     },{
-        file: "dist/esm/bundle.js",
+        file: packageJson.module,
+        // file: "dist/esm/bundle.js",
         format: "esm",
     }],
     

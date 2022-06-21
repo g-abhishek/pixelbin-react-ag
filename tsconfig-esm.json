@@ -1,5 +1,5 @@
 {
-    "include": ["./src/*"],
+    "include": ["./dist/esm/"],
     "compilerOptions": {
         "target": "es6",
         "module": "ES2020",
@@ -7,8 +7,9 @@
         "noEmit": false,
         "sourceMap": true,
         "declaration": true,
-        "rootDir": "./src",
-        "outDir": "./lib/esm",
+        "emitDeclarationOnly": true,
+        "rootDir": "./dist",
+        // "outDir": "./lib/esm",
         "skipLibCheck": true,
         "esModuleInterop": true,
         "moduleResolution": "node",

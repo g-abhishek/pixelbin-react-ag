@@ -142,14 +142,22 @@ const PixelBinImage = ({
 
       if (imgRef.current) URL.revokeObjectURL(imgRef.current.src);
     };
-  }, [url, urlObj]);
+  }, [url, urlObj]); // for SSR
+
+  if (typeof window === "undefined") {
+    return /*#__PURE__*/React__default["default"].createElement("img", _extends({
+      src: url,
+      "data-testid": "pixelbin-image",
+      ref: imgRef,
+      onLoad: onLoad,
+      onError: onError
+    }, imgProps));
+  }
 
   if (isLoading && LoaderComponent) {
     return /*#__PURE__*/React__default["default"].createElement(LoaderComponent, null);
   } else if (isSuccess) {
     return /*#__PURE__*/React__default["default"].createElement("img", _extends({
-      // For SSR
-      src: typeof window === "undefined" ? url : "",
       "data-testid": "pixelbin-image",
       ref: imgRef,
       onLoad: onLoad,

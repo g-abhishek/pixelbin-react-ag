@@ -1,10 +1,10 @@
 {
     "name": "pixelbin-react-ag",
-    "version": "1.0.1",
+    "version": "1.0.11",
     "description": "A React library to integrate PixelBin components in your frontend applications.",
     "private": false,
     "scripts": {
-        "build": "tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json&& rm -rf dist && mkdir dist && rollup --config",
+        "build": "rm -rf dist && mkdir dist && rollup --config && tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json",
         "test": "jest --env=jsdom"
     },
     "repository": {
@@ -53,11 +53,10 @@
             "@babel/preset-react"
         ]
     },
-    "main": "lib/cjs/index.js",
-    "module": "lib/esm/index.js",
+    "main": "dist/cjs/bundle.js",
+    "module": "dist/esm/bundle.js",
     "files": [
         "dist",
-        "lib",
         "README.md"
     ]
 }
