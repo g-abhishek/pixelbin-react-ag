@@ -1,10 +1,10 @@
 import React, { useRef, useState, useEffect } from 'react';
 import axios from 'axios';
 import retry from 'async-retry';
-import PixelBin from 'pixelbin-core-ag';
+import PixelBin from 'pixelbin-core-final';
 
 function _extends() {
-  _extends = Object.assign || function (target) {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
 
@@ -17,7 +17,6 @@ function _extends() {
 
     return target;
   };
-
   return _extends.apply(this, arguments);
 }
 

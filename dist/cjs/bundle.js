@@ -5,7 +5,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var React = require('react');
 var axios = require('axios');
 var retry = require('async-retry');
-var PixelBin = require('pixelbin-core-ag');
+var PixelBin = require('pixelbin-core-final');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -15,7 +15,7 @@ var retry__default = /*#__PURE__*/_interopDefaultLegacy(retry);
 var PixelBin__default = /*#__PURE__*/_interopDefaultLegacy(PixelBin);
 
 function _extends() {
-  _extends = Object.assign || function (target) {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
 
@@ -28,7 +28,6 @@ function _extends() {
 
     return target;
   };
-
   return _extends.apply(this, arguments);
 }
 

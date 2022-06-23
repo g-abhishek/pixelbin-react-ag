@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import retry from "async-retry";
-import PixelBin from "pixelbin-core-ag";
-
+import PixelBin from "pixelbin-core-final";
 import { PDKIllegalArgumentError } from "../../errors/PixelBinErrors.js";
 
 const DEFAULT_RETRY_OPTS = {
